@@ -1,0 +1,48 @@
+common:
+  data_dir: .../cifar10/cifar_train
+  reference_batch_path: ./cifar10_reference_50000x32x32x3.npz
+  image_size: 32
+  batch_size: 256
+  diffusion_steps: 4000
+  learn_sigma: false
+  predict_xstart: false
+  timestep_respacing: ''
+  use_kl: false
+  use_ddim: false
+  resumable: false
+  schedule_sampler: uniform
+  attention_resolutions: "16,8"
+  dropout: 0.3
+  ema_rate: '0.9999'
+  use_fp16: false
+  use_scale_shift_norm: true
+  resblock_updown: false
+  use_new_attention_order: false
+  num_channels: 128
+  num_head_channels: -1
+  num_heads: 4
+  num_heads_upsample: -1
+  num_res_blocks: 3
+  fp16_scale_growth: 0.001
+  lr: 0.0001
+  rescale_timesteps: true
+
+image_train.py:
+  noise_schedule: linear
+
+image_fourier_train.py:
+  output_dir: ...
+  exp_name: training
+  freq_filter_c1: 1.59
+  freq_filter_c2: 0.0086
+  freq_filter_m: 2.0
+  num_samples: 1024
+  log_interval: 50
+  save_interval: 5000
+
+image_fourier_sample.py:
+  num_samples: 1024
+  log_interval: 1
+  model_path: ...
+  output_dir: ...
+  exp_name: samples
