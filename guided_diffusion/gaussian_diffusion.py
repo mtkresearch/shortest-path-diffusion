@@ -483,7 +483,7 @@ class GaussianDiffusion:
         ):
             output, t = sample
             # keep the generated samples for 10 uniformly spaced 't' values.
-            if t in np.linspace(self.num_timesteps - 1, 0, 10).astype(np.int):
+            if t in np.linspace(self.num_timesteps - 1, 0, 10).astype(int):
                 output_ts.append(output["sample"])
         # The last one (i.e. `output_ts[-1]`) is the real sample batch,
         # but the others might be needed for visualization purpose
@@ -660,7 +660,7 @@ class GaussianDiffusion:
         ):
             output, t = sample
             # keep the generated samples for 10 uniformly spaced 't' values.
-            if t in np.linspace(len(self.timestep_map) - 1, 0, 10).astype(np.int):
+            if t in np.linspace(len(self.timestep_map) - 1, 0, 10).astype(int):
                 output_ts.append(output["sample"])
         # The last one (i.e. `output_ts[-1]`) is the real sample batch,
         # but the others might be needed for visualization purpose
