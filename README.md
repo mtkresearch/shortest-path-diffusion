@@ -70,11 +70,11 @@ python evaluations/create_ref_batch.py </tmp/dir/cifar_train/>
 We provide the code for training both our SPD model and the original DDPM model. To train our proposed SPD model, run the following
 
 ```
-python scripts/image_fourier_train.py --config ./configs/cifar10_fourier.yml --data_dir </tmp/dir/cifar_train/> --reference_batch_path ./cifar10_reference_50000x32x32x3.npz --output_dir ./logs --exp_name my_training --debug True --batch_size 24 --num_samples 50000 --diffusion_steps 4000
+python scripts/image_fourier_train.py --config ./configs/cifar10_fourier.yml --data_dir </tmp/dir/cifar_train/> --reference_batch_path ./cifar10_reference_50000x32x32x3.npz --output_dir ./logs --exp_name my_training --debug True --batch_size 1024 --num_samples 50000 --diffusion_steps 4000
 ```
 
 1. Please make sure to use the `--debug True` flag for running in a non-distributed setting, otherwise use [torchrun](https://pytorch.org/docs/stable/elastic/run.html) appropriately.
-2. Use appropriate `--batch_size xx` depending on the GPU used.
+2. Use appropriate `--batch_size xx` depending on the no. of GPUs used (if distributed).
 3. You may use on-the-fly FID computation with `--num_samples xx` but we discourage doing so due to it's time-consuming nature. We recommend a training-only run with `--num_samples 0` followed by separate sampling run.
 
 > **An important argument** for training SPD is the `--diffusion_steps xx` which sets `T`, the total number of diffusion steps. Use this argument with the training as well as the sampling script (explained below) to produce the results in the paper.
