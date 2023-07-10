@@ -2,7 +2,7 @@
 
 **Official code for the "Shortest-path Diffusion" developed by [MediaTek Research](https://www.mtkresearch.com/en/), accepted at [International Conference on Machine Learning](https://icml.cc) 2023.**
 
-> [**Image generation with shortest path diffusion**]() <br />
+> [**Image generation with shortest path diffusion**](https://openreview.net/pdf?id=dFflBEShcI) <br />
 > Ayan Das*, Stathi Fotiadis*, Anil Batra, Farhang Nabiei, FengTing Liao, Sattar Vakili, Da-shan Shiu, Alberto Bernaccia<br /> 
 > [MediaTek Research, Cambourne UK](https://www.mtkresearch.com/en/)<br />
 > (* Equal Contributions)<br />
