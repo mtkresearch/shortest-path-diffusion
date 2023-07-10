@@ -8,8 +8,8 @@
 > (* Equal Contributions)<br />
 
 <p align="center">
-    <a href="#">
-        <img alt="Proceedings" src="https://img.shields.io/badge/Proceedings-informational?&style=for-the-badge&logo=read-the-docs" target="_blank" height=25>
+    <a href="https://openreview.net/pdf?id=dFflBEShcI">
+        <img alt="OpenReview" src="https://img.shields.io/badge/OpenReview-informational?&style=for-the-badge&logo=read-the-docs" target="_blank" height=25>
     </a>
     <a href="https://arxiv.org/abs/2306.00501">
         <img alt="arXiv" src="https://img.shields.io/badge/arXiv-red?style=for-the-badge&logo=github" target="_blank" height=25>
